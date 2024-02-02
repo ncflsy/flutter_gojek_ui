@@ -33,13 +33,18 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               ...['Promo', 'Pemesanan', 'Chat'].map(
-                (title) => Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
+                (title) => Flexible(
+                  fit: FlexFit.loose,
+                  flex: 1,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 36),
                     child: Text(
                       title,
                       style: semibold14.copyWith(color: Colors.white),
-                    )),
-              )
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
